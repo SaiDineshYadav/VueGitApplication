@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <LoginComponent></LoginComponent>       -->
     </div>
-    <router-view />
+    <router-view :key="$route.path" />
   </div>
 </template>
 
@@ -30,3 +29,12 @@
   color: #42b983;
 }
 </style>
+
+<script>
+// import LoginComponent from '@/components/LoginComponent';
+// export default {
+//   components: {
+//     LoginComponent
+//   }
+// }
+</script>
