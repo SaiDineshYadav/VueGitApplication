@@ -2,7 +2,7 @@
     <div>
         Users List
         <div class="card" style="width: 18rem;" v-for="user of gitUsersList" :key="user.id">
-            <img :src="user['avatar_url']"  class="card-img-top" :alt="user['login']" >
+            <img class="card-img-top imageClass" :src="user['avatar_url']" @click="$emit('getUserDetails', user)"  :alt="user['login']" >
             <div class="card-body">
                 <h5 class="card-title"> {{user['id']}} - {{user['login']}}</h5>
                 <p class="card-text">{{user['type']}}</p>
@@ -37,3 +37,8 @@ export default {
 }
 </script>
 
+<style>
+.imageClass {
+    max-width: 100px;
+}
+</style>

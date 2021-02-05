@@ -6,7 +6,7 @@
                 <div class="col-sm-8">
                     <GitUsersList @getUserDetails="getUserDetails($event)"></GitUsersList>
                 </div>
-                <div class="col-sm-4" v-if="userDetails.id">
+                <div class="col-sm-4">
                     <GitUserDetails :userDetails="userDetails"></GitUserDetails>
                 </div>
             </div>

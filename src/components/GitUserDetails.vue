@@ -6,7 +6,7 @@
             <div class="card-body">
                 <h5 class="card-title"> {{userDetails['id']}} - {{userDetails['login']}}</h5>
                 <p class="card-text">{{userDetails['type']}}</p>
-                <!-- <button class="btn btn-primary">Click</button> -->
+                <button class="btn btn-primary" @click="showFullDetails()" >Full Details</button>
             </div>
         </div>
     </div>
@@ -23,5 +23,10 @@ export default {
     created() {
         console.log(this.userDetails)
     },
+    methods: {
+        showFullDetails() {
+            
+        }
+    }
 }
 </script>
