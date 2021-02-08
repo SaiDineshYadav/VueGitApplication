@@ -32,6 +32,7 @@ export default {
                let pass = localStorage.getItem('password');
                if (name == this.userName && pass == this.password) {
                    alert('Login Success');
+                   localStorage.setItem('isUserLoggedIn', true);
                     this.$router.push('/users');
                } else {
                    alert('Invalid User');
